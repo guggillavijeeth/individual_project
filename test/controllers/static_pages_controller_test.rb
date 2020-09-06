@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get static_pages_home_url
     assert_response :success
-    assert_select "title", "Home | Rubik's Cube Timer"
+    assert_select "title", "Rubik's Cube Timer"
   end
 
   test "should get help" do
