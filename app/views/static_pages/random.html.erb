@@ -1,0 +1,11 @@
+<% provide(:title, "Random") %>
+<h1>Random</h1>
+   <p>
+      Try the following sequence of moves on a solved Rubik's cube for a fun surprise! Remember that you can revert back to a solved cube by following all the moves in reverse!
+   </p>
+   <p>
+      <%= @result %>
+   </p>
+   <p>
+      <%= link_to "Another One!", random_path, class: "btn btn-lg btn-primary" %>
+   </p>
