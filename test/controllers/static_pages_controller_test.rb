@@ -24,5 +24,11 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Contact | Rubik's Cube Timer"
   end
+  
+  test "should get random" do
+    get random_path
+    assert_response :success
+    assert_select "title", "Random | Rubik's Cube Timer"
+  end
 
 end
