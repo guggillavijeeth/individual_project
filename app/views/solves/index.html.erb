@@ -1,0 +1,16 @@
+<% provide(:title, "Solves") %>
+
+<h1>Historical Solves Data</h1>
+
+<h2>Summary Statistics</h2>
+<ul>
+   <li>Best Solve Time: <%= @best_solve %></li>
+   <li>Average Solve Time: <%= @average_solve_time %></li>
+</ul>
+<br>
+<h2>All Solves</h2>
+<ul>
+   <% @solves.each do |solve| %>
+   <li><%= solve.scramble %> was solved in <%= solve.seconds %> seconds</li>
+   <% end %>
+</ul>
