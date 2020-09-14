@@ -1,0 +1,22 @@
+<% provide(:title, "Add Solve Time") %>
+<h1>Add a New Solve Time</h1>
+<p>Use the random scramble below to shuffle the cube, time yourself solving the cube, and then save your time (in seconds) along with the scramble.</p>
+<p>
+   <%= @generated_scramble %>
+</p>
+<br>
+<div class="row">
+   <div class="col-md-6 col-md-offset-3">
+      <%= form_with(model: @solve, local: true) do |f| %>
+         <%= render 'shared/error_messages' %>
+      
+         <%= f.label :seconds %>
+         <%=f.text_field :seconds, class: 'form_control' %>
+         
+         <%= f.label :scramble %>
+         <%=f.text_field :scramble, :value => @generated_scramble, class: 'form_control' %>
+         
+         <%= f.submit "Save Solve!", class: "btn btn-primary" %>
+      <% end %>
+   </div>
+</div>
