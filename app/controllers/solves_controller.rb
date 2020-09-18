@@ -5,7 +5,7 @@ class SolvesController < ApplicationController
       @solves = solve_list
       @best_solve = solve_list.first.seconds
       solve_list.each do |current_solve|
-         if current_solve.seconds < @best_solve
+         if current_solve.seconds.to_f < @best_solve.to_f
             @best_solve = current_solve.seconds.to_f.round(3).to_s
          end
       end
